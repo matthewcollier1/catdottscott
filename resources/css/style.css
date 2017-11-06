@@ -6,8 +6,8 @@ Main Grid Container
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 40px 1fr 1fr 1fr 1fr 1fr 1fr 40px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 40px repeat(6, 1fr) 40px;
   grid-gap: 0.3%;
 }
 
@@ -55,11 +55,29 @@ Grid Left
 }
 
 .bio{
-  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-  background-color: red;
-  grid-column: 4 / 6;
+  clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  background-color: #f565654d;
+  grid-column: 2 / 4;
   grid-row: 2 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+div.bio:hover{
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+  background-color: #ff16164d;
+}
+
+.bio p{
+  font-family: 'Oxygen', sans-serif;
+  font-size: 30px;
+  color: #cb8787;
+}
+
+
 
 
 /******************************************************************************
